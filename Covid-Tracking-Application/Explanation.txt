@@ -1,0 +1,107 @@
+**********************************
+https://github.com/Devendra-Octto
+***********************************
+https://github.com/CSSEGISandData/COVID-19 ---> https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data
+---> csse_covid_19_time_series --> 
+COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv -->
+
+https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+--> 
+java csv library--> https://commons.apache.org/proper/commons-csv/ -->
+ <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.9.0</version>
+</dependency>
+---------------------------------------------------------------
+https://commons.apache.org/proper/commons-csv/user-guide.html
+-----------------------------------------------------------------
+Header auto detection
+----------------------
+Reader in = new FileReader("path/to/file.csv");
+Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(in);
+for (CSVRecord record : records) {
+    String id = record.get("ID");
+    String customerNo = record.get("CustomerNo");
+    String name = record.get("Name");
+}
+    
+------------------------------------------------------------
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#a-multi-language-welcome
+===========================================
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+  </head>
+
+  <body>
+  
+    <p th:text="#{home.welcome}">Welcome to our grocery store!</p>
+  
+  </body>
+
+</html>
+==================================================================
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-theach
+----------------------------------------------------------------------------
+<table>
+      <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>IN STOCK</th>
+      </tr>
+      <tr th:each="prod : ${prods}">
+        <td th:text="${prod.name}">Onions</td>
+        <td th:text="${prod.price}">2.41</td>
+        <td th:text="${prod.inStock}? #{true} : #{false}">yes</td>
+      </tr>
+    </table>
+-------------------------------------------------------------------
+
+BootStrap Use
+--------------
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+=================================================
+jumbotron
+------------------
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
